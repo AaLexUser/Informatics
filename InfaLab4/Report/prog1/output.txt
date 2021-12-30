@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<main>
+	<Вторник>
+		<day>Вт</day>
+		<time|week>
+			<time>11:40-13:10</time>
+			<week>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</week>
+		</time|week>
+		<room|building>
+			<room>2202 ауд.</room>
+			<building>ул.Ломоносова, д.9, лит. А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Математика(Лек)</lesson>
+			<teacher>Ершова Юлия Юрьевна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+	</Вторник>
+	<Среда>
+		<day>Ср</day>
+		<time|week>
+			<time>10:00-11:30</time>
+			<week>четная неделя</week>
+		</time|week>
+		<room|building>
+			<room>409 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Математика(Прак)</lesson>
+			<teacher>Синетова Мадина Мансуровна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Ср</day>
+		<time|week>
+			<time>10:00-11:30</time>
+			<week>3, 5, 7, 9, 11, 13, 15, 17</week>
+		</time|week>
+		<room|building>
+			<room>461 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Математика(Прак)</lesson>
+			<teacher>Синетова Мадина Мансуровна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Ср</day>
+		<time|week>
+			<time>11:40-13:10</time>
+			<week>четная неделя</week>
+		</time|week>
+		<room|building>
+			<room>303|2 (усл) ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Основы профессиональной деятельности(Лаб)</lesson>
+			<teacher>Ткешелашвили Нино Мерабиевна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Ср</day>
+		<time|week>
+			<time>11:40-13:10</time>
+			<week>3, 5, 7, 9, 11, 13, 15, 17</week>
+		</time|week>
+		<room|building>
+			<room>306 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Программирование(Лаб)</lesson>
+			<teacher>Сорокин Роман Борисович</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Ср</day>
+		<time|week>
+			<time>13:30-15:00</time>
+			<week>четная неделя</week>
+		</time|week>
+		<room|building>
+			<room>303|2 (усл) ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Основы профессиональной деятельности(Лаб)</lesson>
+			<teacher>Ткешелашвили Нино Мерабиевна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Ср</day>
+		<time|week>
+			<time>13:30-15:00</time>
+			<week>3, 5, 7, 9, 11, 13, 15, 17</week>
+		</time|week>
+		<room|building>
+			<room>306 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Программирование(Лаб)</lesson>
+			<teacher>Сорокин Роман Борисович</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+	</Среда>
+	<Четверг>
+		<day>Чт</day>
+		<time|week>
+			<time>10:00-11:30</time>
+			<week>3, 5, 7, 9, 11, 13, 15, 17</week>
+		</time|week>
+		<room|building>
+			<room>306 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Информатика(Лаб)</lesson>
+			<teacher>Рудникова Тамара Владимировна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Чт</day>
+		<time|week>
+			<time>11:40-13:10</time>
+			<week>3, 5, 7, 9, 11, 13, 15, 17</week>
+		</time|week>
+		<room|building>
+			<room>306 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Информатика(Лаб)</lesson>
+			<teacher>Рудникова Тамара Владимировна</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Чт</day>
+		<time|week>
+			<time>13:30-15:00</time>
+			<week>3, 5, 7, 9, 11, 13, 15, 17</week>
+		</time|week>
+		<room|building>
+			<room>285 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Дискретная математика(Лек)</lesson>
+			<teacher>Поляков Владимир Иванович</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Чт</day>
+		<time|week>
+			<time>15:20-16:50</time>
+			<week>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17</week>
+		</time|week>
+		<room|building>
+			<room>302 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Дискретная математика(Прак)</lesson>
+			<teacher>Поляков Владимир Иванович</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+	</Четверг>
+	<Пятница>
+		<day>Пт</day>
+		<time|week>
+			<time>10:00-11:30</time>
+			<week>четная неделя</week>
+		</time|week>
+		<room|building>
+			<room>актовый зал</room>
+			<building>ул.Ломоносова, д.9, лит. А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Основы профессиональной деятельности(Лек)</lesson>
+			<teacher>Клименков Сергей Викторович</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+		<day>Чт</day>
+		<time|week>
+			<time>11:40-13:10</time>
+			<week>четная неделя</week>
+		</time|week>
+		<room|building>
+			<room>актовый зал</room>
+			<building>ул.Ломоносова, д.9, лит. М</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Программирование(Лек)</lesson>
+			<teacher>Письмак Алексей Евгеньевич</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+	</Пятница>
+	<Суббота>
+		<day>Сб</day>
+		<time|week>
+			<time>10:00-11:30</time>
+			<week>четная неделя</week>
+		</time|week>
+		<room|building>
+			<room>285 ауд.</room>
+			<building>Кронверкский пр., д.49, лит.А</building>
+		</room|building>
+		<lesson|teacher>
+			<lesson>Информатика(Лек)</lesson>
+			<teacher>Балакшин Павел Валерьевич</teacher>
+		</lesson|teacher>
+		<lesson-format>Очно - дистанционный</lesson-format>
+	</Суббота>
+</main>

@@ -1,0 +1,350 @@
+\documentclass[12pt,onecolumn]{article}
+
+\usepackage{listings}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage[russian]{babel}
+\everymath{\displaystyle}
+\usepackage{color}
+\usepackage[usenames]{color}
+\usepackage{placeins}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=25mm, 
+  right=15mm, 
+  bottom=25mm, 
+  left=15mm
+}
+
+\begin{document}
+\setcounter{tocdepth}{4}
+\begin{center}
+    Санкт-Петербургский Национальный Исследовательский\\ 
+    Университет ИТМО\\
+    Факультет Программной Инженерии и Компьютерной Техники\\
+    \includegraphics[scale=0.3]{itm.jpg} % нужно закинуть картинку логтипа в папку с отчетом
+\end{center}
+\vspace{1cm}
+
+
+\begin{center}
+    \large \textbf{Вариант №26}\\
+    \textbf{Лабораторная работа №1}\\
+    по дисциплине\\
+    \textbf{\textcolor{red}{\textit{'Информатика'}}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{flushright}
+  Выполнил Студент  группы P3116\\
+  \textbf{Алексей Лапин}\\
+  Преподаватель: \\
+  \textbf{Машина Екатерина Алексеевна }\\
+\end{flushright}
+
+\vspace{6cm}
+\begin{center}
+    г. Санкт-Петербург\\
+    2021г.
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+\section{Текст лабораторной}
+\begin{enumerate} 
+\item Перевести число  ``А'' , заданное в системе счисления ``В'', в систему счисления ``С''. Числа ``A'', ``В'' и ``С'' взять из представленных ниже таблиц.
+\item Всего нужно решить 13 примеров. Для примеров с 5-го по 7-й выполнить операцию перевода по сокращенному правилу (для систем с основанием 2 в системы с основанием 2 $\widehat$  k). Для примеров с 4-го по 6-й и с 8-го по 9- й найти ответ с точностью до 5 знака после запятой. В примере 11 группа символов \{ $\widehat$ 1\} означает -1 в симметричной системе счисления. 
+\end{enumerate}
+\section{Выполнение заданий}
+\paragraph{Задание 1}
+
+
+$85407_{10} \rightarrow X_{11}$
+
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+\FloatBarrier
+\begin{table}[h]
+\centering
+\begin{tabular}{lllll}
+\multicolumn{1}{l|}{85407} & 11                        &                          &                         &     \\ 
+\cline{2-2}
+\multicolumn{1}{l|}{85404} & \multicolumn{1}{l|}{7764} & 11                       &                         &     \\ 
+\cline{1-1}\cline{3-3}
+3                          & \multicolumn{1}{l|}{7755} & \multicolumn{1}{l|}{705} & 11                      &     \\ 
+\cline{2-2}\cline{4-4}
+                           & 9                         & \multicolumn{1}{l|}{704} & \multicolumn{1}{l|}{64} & 11  \\ 
+\cline{3-3}\cline{5-5}
+                           &                           & 1                        & \multicolumn{1}{l|}{55} & 5   \\ 
+\cline{4-4}
+                           &                           &                          & 9                       &     \\
+                           &                           &                          &                         &    
+\end{tabular}
+\end{table}
+\FloatBarrier
+$85407_{10} \rightarrow 59193_{11}$
+\paragraph{Ответ:}
+$59193_{11}$
+\paragraph{Задание 2}
+$1A550_{11} \rightarrow X_{10}$
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+\hfill \break
+$1A550_{11}=1\cdot 11^4 + 10\cdot 11^3 +5\cdot 11^2 + 5\cdot11+0=14641+13310+605+55=28611_{10}$
+
+\paragraph{Ответ:}
+$28611_{10}$
+
+\paragraph{Задание 3}
+$43455_{7} \rightarrow X_{13}$
+
+\paragraph{Основные этапы вычисления:}
+
+\begin{enumerate}
+\item Переведём $43455_{7} \rightarrow X_{10}$
+
+$43455_{7} = 4\cdot7^4 + 3\cdot 7^3 + 4\cdot 7^2 + 5\cdot7+5=9604+1029+196+35+5=10869_{10}$
+
+\item Переведём $10869_{10} \rightarrow X_{13}$
+
+\FloatBarrier
+\begin{table}
+\centering
+\begin{tabular}{lllll}
+\multicolumn{1}{l|}{10869} & 13                       &                         &    &   \\ 
+\cline{2-2}
+\multicolumn{1}{l|}{10868} & \multicolumn{1}{l|}{836} & 13                      &    &   \\ 
+\cline{1-1}\cline{3-3}
+1                          & \multicolumn{1}{l|}{832} & \multicolumn{1}{l|}{64} & 13 &   \\ 
+\cline{2-2}\cline{4-4}
+                           & 4                        & \multicolumn{1}{l|}{52} & 4  &   \\ 
+\cline{3-3}
+                           &                          & С                       &    &   \\
+                           &                          &                         &    &   \\
+                           &                          &                         &    &  
+\end{tabular}
+\end{table}
+\FloatBarrier
+$43455_{7} \rightarrow 4C41_{13}$
+\end{enumerate}
+
+\paragraph{Ответ:}
+$4C41_{13}$
+
+\paragraph{Задание 4}
+$36,19_{10} \rightarrow X_{2}$
+\paragraph{Основные этапы вычисления:}
+\begin{enumerate}
+\item Переведём $36_{10} \rightarrow X_{2}$
+
+\FloatBarrier
+\begin{table}[bh]
+\centering
+\begin{tabular}{llllll}
+\multicolumn{1}{l|}{36} & 2                       &                        &                        &                        &    \\ 
+\cline{2-2}
+\multicolumn{1}{l|}{36} & \multicolumn{1}{l|}{18} & 2                      &                        &                        &    \\ 
+\cline{1-1}\cline{3-3}
+0                       & \multicolumn{1}{l|}{18} & \multicolumn{1}{l|}{9} & 2                      &                        &    \\ 
+\cline{2-2}\cline{4-4}
+                        & 0                       & \multicolumn{1}{l|}{8} & \multicolumn{1}{l|}{4} & 2                      &    \\ 
+\cline{3-3}\cline{5-5}
+                        &                         & 1                      & \multicolumn{1}{l|}{4} & \multicolumn{1}{l|}{2} & 2  \\ 
+\cline{4-4}\cline{6-6}
+                        &                         &                        & 0                      & \multicolumn{1}{l|}{2} & 1  \\ 
+\cline{5-5}
+                        &                         &                        &                        & 0                      &   
+\end{tabular}
+\end{table}
+\FloatBarrier
+$36_{10} \rightarrow 100100_{2}$
+\item Переведём $0,19_{10} \rightarrow X_{2}$
+\FloatBarrier
+\begin{table}[bh]
+\centering
+\begin{tabular}{|l|l|llll}
+0 & ,19 &  &  &  &   \\
+  & 2   &  &  &  &   \\ 
+\cline{1-2}
+0 & ,38 &  &  &  &   \\
+  & 2   &  &  &  &   \\ 
+\cline{1-2}
+0 & ,76 &  &  &  &   \\
+  & 2   &  &  &  &   \\ 
+\cline{1-2}
+1 & ,52 &  &  &  &   \\
+  & 2   &  &  &  &   \\ 
+\cline{1-2}
+1 & ,04 &  &  &  &   \\
+  & 2   &  &  &  &   \\ 
+\cline{1-2}
+0 & ,08 &  &  &  &   \\
+  & 2   &  &  &  &  
+\end{tabular}
+\end{table}
+\FloatBarrier
+$0,19_{10} \rightarrow 0,0011_{2}$
+\item Тогда $36,19_{10} \rightarrow 100100,0011_{2}$
+\end{enumerate}
+\paragraph{Ответ:}
+$100100,0011_{2}$
+
+\paragraph{Задание 5}
+$83,E1_{16} \rightarrow X_{2}$
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+
+Зная, что:
+
+$8_{16} <=> 1000_{2}$;
+
+$3_{16} <=> 0011_{2}$;
+
+$E_{16} <=> 1110_{2}$;
+
+$1_{16} <=> 0001_{2}$;
+
+Выполним перевод:
+
+$83,E1_{16} = 1000~0011,~1110~0001_{2}$
+
+\paragraph{Ответ:}
+$10000011,111_{2}$
+
+\paragraph{Задание 6}
+$22,32_{8} \rightarrow X_{2}$
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+
+Зная, что:
+
+$2_{8} <=> 010_{2}$;
+
+$3_{8} <=> 011_{2}$;
+
+Выполним перевод:
+
+$22,32_{8} = 10~010,~011~01_{2}$
+
+\paragraph{Ответ:}
+$10010,01101_{2}$
+
+\paragraph{Задание 7}
+$0,011101_{2} \rightarrow X_{16}$
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+
+Зная, что:
+
+$7_{16} <=> 0111_{2}$;
+
+$4_{8} <=> 0100_{2}$;
+
+Выполним перевод:
+
+$0,0111~0100_{2} = 0,74_{16}$
+
+\paragraph{Ответ:}
+$0,74_{16}$
+
+\paragraph{Задание 8}
+$0,011101_{2} \rightarrow X_{10}$
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+$0,011101_{2} = 0 + 0\cdot2{-1} + 1\cdot2^{-2} + 1\cdot2^{-3} + 1\cdot2^{-4} + 0\cdot2^{-5}+1\cdot2^{-6} = 0,25+0.125+0,0625+0,015625 = 0,453125 \approx 0,45313_{10}$
+
+\paragraph{Ответ:}
+$0,45313_{10}$
+
+\paragraph{Задание 9}
+$B7,F4_{16} \rightarrow X_{10}$
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+$B7,F4_{16} = 11\cdot16+7+15\cdot16^{-1}+4\cdot16^{-2} = 176+7+\frac{15}{16}+\frac{4}{256} =\frac{11773}{64} \approx 183,95313_{10}$
+\paragraph{Ответ:}
+$183,95313_{10}$
+
+\paragraph{Задание 10}
+$67_{10} \rightarrow X_\text{Фиб}$
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+$67_{10} = 55 + 8 + 3 + 1 = 100010101_\text{Фиб}$
+
+\paragraph{Ответ:}
+$100010101_\text{Фиб}$
+
+\paragraph{Задание 11}
+$692_{-10} \rightarrow X_{10}$
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+$692_{-10} = 6\cdot(-10)^{2}+9\cdot(-10)+2 = 600 - 90 + 2 = 512_{10}$
+
+\paragraph{Ответ:}
+$512_{10}$
+
+\paragraph{Задание 12}
+$32\overline{3}44_\text{9C} \rightarrow X_{10}$
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+
+$32\overline{3}44_\text{9C} = 3\cdot9^{4}+2\cdot9^{3}+(-3)\cdot9^{2}+4\cdot9+4=20938_{10}$
+
+\paragraph{Ответ:}
+$20938_{10}$
+
+\paragraph{Задание 13}
+$3088_{10} \rightarrow X_\text{Ф}$
+
+\paragraph{Основные этапы вычисления:}
+\hfill \break
+\begin{enumerate}
+\item 3088 div 2 = 1544
+\item 1544 div 3 = 514
+\item 514 div 4 = 128
+\item 128 div 5 = 25
+\item 25 div 6 = 4
+\item 4 div 7 = 0
+\end{enumerate}
+$X_\text{Ф} = d_1d_2d_3d_4d_5d_\text{6(Ф)}$
+\begin{enumerate}
+\item $d_{1}$ = 3088 mod 2 = 0
+\item $d_{2}$ = 1544 mod 3 = 2
+\item $d_{3}$ = 514 mod 4 = 2
+\item $d_{4}$ = 128 mod 5 = 3
+\item $d_{5}$ = 25 mod 6 = 1
+\item $d_{6}$ = 4 mod 7 = 4
+\end{enumerate}
+$3088_{10} \rightarrow 413220_\text{Ф}$
+
+\paragraph{Ответ:}
+$413220_\text{Ф}$
+\section{Вывод}
+В этой лабораторной работе я научился:
+\begin{itemize}
+\item Переводить из СС-10 в любую другую СС;
+\item Переводить из любой СС в СС-10;
+\item Переводить по сокращённому правилу для(для систем с основанием 2 в системы с основанием 2 $\widehat{}$ k);
+\item Переводить из СС-10 в факториальную СС;
+\item Переводить из нега-позиционных СС, Симметричных СС, CC Цекендорфа в СС-10;
+\end{itemize}
+\section{Cписок литературы}
+\begin{thebibliography}{0}
+\bibitem {Арифметические основы вычислительных машин}
+«Арифметические основы вычислительных машин» --- Орлов С. А., Цилькер Б. Я. Организация ЭВМ и систем: Учебник для вузов. 2-е изд. – СПб.: Питер, 2011. – 688 с.: ил.
+\end{thebibliography}
+\end{document}

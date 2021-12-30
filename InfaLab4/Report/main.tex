@@ -1,0 +1,1056 @@
+\documentclass[12pt,onecolumn]{article}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage[english,russian]{babel}
+\everymath{\displaystyle}
+\usepackage{hyperref}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage[T2A]{fontenc}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=25mm, 
+  right=15mm, 
+  bottom=25mm, 
+  left=15mm
+}
+
+\begin{document}
+\setcounter{tocdepth}{4}
+\begin{center}
+    Санкт-Петербургский Национальный Исследовательский\\ 
+    Университет ИТМО\\
+    Мегафакультет Компьютерных Технологий и Управления\\
+    Факультет Программной Инженерии и Компьютерной Техники \\
+    \includegraphics[scale=0.3]{itm.jpg} % нужно закинуть картинку логтипа в папку с отчетом
+\end{center}
+\vspace{1cm}
+
+
+\begin{center}
+    \textbf{Лабораторная работа №4}\\
+    по дисциплине\\
+    \textbf{Информатика}
+\end{center}
+
+\vspace{2cm}
+
+\begin{flushright}
+  Выполнил Студент  группы P3116\\
+  \textbf{Алексей Лапин}\\
+  Преподаватель: \\
+  \textbf{Машина Екатерина Алексеевна }\\
+\end{flushright}
+
+\vspace{10cm}
+\begin{center}
+    г. Санкт-Петербург\\
+    2021г.
+\end{center}
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+\begin{flushleft}
+\section{Выполнение заданий}
+\subsection{Задание 1}
+\paragraph{Текст задания:}
+\hfill \break
+Написать программу на языке Python 3.x, которая бы осуществляла парсинг и конвертацию исходного файла в новый.\\
+\textbf{Вариант: 1~~JSON $\rightarrow$ XML}\\
+\paragraph{Код}
+\hfill \break
+\FloatBarrier
+\lstloadlanguages{Python}
+\definecolor{mygray}{RGB}{120,120,120}
+\lstset{
+inputencoding=utf8x,
+extendedchars =\true,
+breaklines=true,
+basicstyle=\ttfamily\fontsize{9pt}{9pt}\selectfont,
+commentstyle=\color{mygray},
+keywordstyle=\color{blue},
+keepspaces=true,
+showstringspaces=false}
+\lstinputlisting[language=Python,numbers=left]{prog1/main.py}
+\hfill \break
+\textbf{Исходный файл:}\\
+\begingroup
+\fontsize{5pt}{7pt}\selectfont
+  \begin{verbatim}
+    {
+  "Вторник": [
+    {
+      "day": "Вт",
+      "time|week": {
+        "time": "11:40-13:10",
+        "week": "2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17"
+      },
+      "room|building": {
+        "room": "2202 ауд.",
+        "building": "ул.Ломоносова, д.9, лит. А"
+      },
+      "lesson|teacher": {
+        "lesson": "Математика(Лек)",
+        "teacher": "Ершова Юлия Юрьевна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    }
+  ],
+  "Среда": [
+    {
+      "day": "Ср",
+      "time|week": {
+        "time": "10:00-11:30",
+        "week": "четная неделя"
+      },
+      "room|building": {
+        "room": "409 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Математика(Прак)",
+        "teacher": "Синетова Мадина Мансуровна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Ср",
+      "time|week": {
+        "time": "10:00-11:30",
+        "week": "3, 5, 7, 9, 11, 13, 15, 17"
+      },
+      "room|building": {
+        "room": "461 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Математика(Прак)",
+        "teacher": "Синетова Мадина Мансуровна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Ср",
+      "time|week": {
+        "time": "11:40-13:10",
+        "week": "четная неделя"
+      },
+      "room|building": {
+        "room": "303|2 (усл) ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Основы профессиональной деятельности(Лаб)",
+        "teacher": "Ткешелашвили Нино Мерабиевна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Ср",
+      "time|week": {
+        "time": "11:40-13:10",
+        "week": "3, 5, 7, 9, 11, 13, 15, 17"
+      },
+      "room|building": {
+        "room": "306 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Программирование(Лаб)",
+        "teacher": "Сорокин Роман Борисович"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Ср",
+      "time|week": {
+        "time": "13:30-15:00",
+        "week": "четная неделя"
+      },
+      "room|building": {
+        "room": "303|2 (усл) ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Основы профессиональной деятельности(Лаб)",
+        "teacher": "Ткешелашвили Нино Мерабиевна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Ср",
+      "time|week": {
+        "time": "13:30-15:00",
+        "week": "3, 5, 7, 9, 11, 13, 15, 17"
+      },
+      "room|building": {
+        "room": "306 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Программирование(Лаб)",
+        "teacher": "Сорокин Роман Борисович"
+      },
+      "lesson-format": "Очно - дистанционный"
+    }
+  ],
+  "Четверг": [
+    {
+      "day": "Чт",
+      "time|week": {
+        "time": "10:00-11:30",
+        "week": "3, 5, 7, 9, 11, 13, 15, 17"
+      },
+      "room|building": {
+        "room": "306 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Информатика(Лаб)",
+        "teacher": "Рудникова Тамара Владимировна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Чт",
+      "time|week": {
+        "time": "11:40-13:10",
+        "week": "3, 5, 7, 9, 11, 13, 15, 17"
+      },
+      "room|building": {
+        "room": "306 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Информатика(Лаб)",
+        "teacher": "Рудникова Тамара Владимировна"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Чт",
+      "time|week": {
+        "time": "13:30-15:00",
+        "week": "3, 5, 7, 9, 11, 13, 15, 17"
+      },
+      "room|building": {
+        "room": "285 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Дискретная математика(Лек)",
+        "teacher": "Поляков Владимир Иванович"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Чт",
+      "time|week": {
+        "time": "15:20-16:50",
+        "week": "2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17"
+      },
+      "room|building": {
+        "room": "302 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Дискретная математика(Прак)",
+        "teacher": "Поляков Владимир Иванович"
+      },
+      "lesson-format": "Очно - дистанционный"
+    }
+  ],
+  "Пятница": [
+    {
+      "day": "Пт",
+      "time|week": {
+        "time": "10:00-11:30",
+        "week": "четная неделя"
+      },
+      "room|building": {
+        "room": "актовый зал",
+        "building": "ул.Ломоносова, д.9, лит. А"
+      },
+      "lesson|teacher": {
+        "lesson": "Основы профессиональной деятельности(Лек)",
+        "teacher": "Клименков Сергей Викторович"
+      },
+      "lesson-format": "Очно - дистанционный"
+    },
+    {
+      "day": "Чт",
+      "time|week": {
+        "time": "11:40-13:10",
+        "week": "четная неделя"
+      },
+      "room|building": {
+        "room": "актовый зал",
+        "building": "ул.Ломоносова, д.9, лит. М"
+      },
+      "lesson|teacher": {
+        "lesson": "Программирование(Лек)",
+        "teacher": "Письмак Алексей Евгеньевич"
+      },
+      "lesson-format": "Очно - дистанционный"
+    }
+  ],
+  "Суббота": [
+    {
+      "day": "Сб",
+      "time|week": {
+        "time": "10:00-11:30",
+        "week": "четная неделя"
+      },
+      "room|building": {
+        "room": "285 ауд.",
+        "building": "Кронверкский пр., д.49, лит.А"
+      },
+      "lesson|teacher": {
+        "lesson": "Информатика(Лек)",
+        "teacher": "Балакшин Павел Валерьевич"
+      },
+      "lesson-format": "Очно - дистанционный"
+    }
+  ]
+}
+  \end{verbatim}
+\endgroup
+\textbf{Результат программы:}\\
+\begingroup
+    \fontsize{5pt}{7pt}\selectfont
+    \begin{verbatim}  
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <main>
+        <Вторник>
+          <day>Вт</day>
+          <time|week>
+            <time>11:40-13:10</time>
+            <week>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</week>
+          </time|week>
+          <room|building>
+            <room>2202 ауд.</room>
+            <building>ул.Ломоносова, д.9, лит. А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Математика(Лек)</lesson>
+            <teacher>Ершова Юлия Юрьевна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+        </Вторник>
+        <Среда>
+          <day>Ср</day>
+          <time|week>
+            <time>10:00-11:30</time>
+            <week>четная неделя</week>
+          </time|week>
+          <room|building>
+            <room>409 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Математика(Прак)</lesson>
+            <teacher>Синетова Мадина Мансуровна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Ср</day>
+          <time|week>
+            <time>10:00-11:30</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+          </time|week>
+          <room|building>
+            <room>461 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Математика(Прак)</lesson>
+            <teacher>Синетова Мадина Мансуровна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Ср</day>
+          <time|week>
+            <time>11:40-13:10</time>
+            <week>четная неделя</week>
+          </time|week>
+          <room|building>
+            <room>303|2 (усл) ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Основы профессиональной деятельности(Лаб)</lesson>
+            <teacher>Ткешелашвили Нино Мерабиевна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Ср</day>
+          <time|week>
+            <time>11:40-13:10</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+          </time|week>
+          <room|building>
+            <room>306 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Программирование(Лаб)</lesson>
+            <teacher>Сорокин Роман Борисович</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Ср</day>
+          <time|week>
+            <time>13:30-15:00</time>
+            <week>четная неделя</week>
+          </time|week>
+          <room|building>
+            <room>303|2 (усл) ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Основы профессиональной деятельности(Лаб)</lesson>
+            <teacher>Ткешелашвили Нино Мерабиевна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Ср</day>
+          <time|week>
+            <time>13:30-15:00</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+          </time|week>
+          <room|building>
+            <room>306 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Программирование(Лаб)</lesson>
+            <teacher>Сорокин Роман Борисович</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+        </Среда>
+        <Четверг>
+          <day>Чт</day>
+          <time|week>
+            <time>10:00-11:30</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+          </time|week>
+          <room|building>
+            <room>306 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Информатика(Лаб)</lesson>
+            <teacher>Рудникова Тамара Владимировна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Чт</day>
+          <time|week>
+            <time>11:40-13:10</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+          </time|week>
+          <room|building>
+            <room>306 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Информатика(Лаб)</lesson>
+            <teacher>Рудникова Тамара Владимировна</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Чт</day>
+          <time|week>
+            <time>13:30-15:00</time>
+            <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+          </time|week>
+          <room|building>
+            <room>285 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Дискретная математика(Лек)</lesson>
+            <teacher>Поляков Владимир Иванович</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Чт</day>
+          <time|week>
+            <time>15:20-16:50</time>
+            <week>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17</week>
+          </time|week>
+          <room|building>
+            <room>302 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Дискретная математика(Прак)</lesson>
+            <teacher>Поляков Владимир Иванович</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+        </Четверг>
+        <Пятница>
+          <day>Пт</day>
+          <time|week>
+            <time>10:00-11:30</time>
+            <week>четная неделя</week>
+          </time|week>
+          <room|building>
+            <room>актовый зал</room>
+            <building>ул.Ломоносова, д.9, лит. А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Основы профессиональной деятельности(Лек)</lesson>
+            <teacher>Клименков Сергей Викторович</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+          <day>Чт</day>
+          <time|week>
+            <time>11:40-13:10</time>
+            <week>четная неделя</week>
+          </time|week>
+          <room|building>
+            <room>актовый зал</room>
+            <building>ул.Ломоносова, д.9, лит. М</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Программирование(Лек)</lesson>
+            <teacher>Письмак Алексей Евгеньевич</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+        </Пятница>
+        <Суббота>
+          <day>Сб</day>
+          <time|week>
+            <time>10:00-11:30</time>
+            <week>четная неделя</week>
+          </time|week>
+          <room|building>
+            <room>285 ауд.</room>
+            <building>Кронверкский пр., д.49, лит.А</building>
+          </room|building>
+          <lesson|teacher>
+            <lesson>Информатика(Лек)</lesson>
+            <teacher>Балакшин Павел Валерьевич</teacher>
+          </lesson|teacher>
+          <lesson-format>Очно - дистанционный</lesson-format>
+        </Суббота>
+      </main>
+    \end{verbatim}  
+\endgroup
+\subsection{Доп. задание 1}
+\paragraph{Текст задания:}
+\hfill \break
+1) Найти готовые библиотеки, осуществляющие аналогичный парсинг и конвертацию файлов..\\
+2) Переписать исходный код, применив найденные библиотеки. Регулярные выражения также нельзя использовать.\\
+3) Сравнить полученные результаты и объяснить их сходство/различие.\\
+\paragraph{Код}
+\hfill \break
+\FloatBarrier
+\lstinputlisting[language=Python,numbers=left]{prog2/main.py}
+\hfill \break
+\textbf{Результат программы:}\\
+\begingroup
+    \fontsize{5pt}{7pt}\selectfont
+    \begin{verbatim}  
+        <?xml version="1.0" ?>
+        <all>
+          <Вторник type="list">
+            <item type="dict">
+              <day type="str">Вт</day>
+              <key name="time|week" type="dict">
+                <time type="str">11:40-13:10</time>
+                <week type="str">2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">2202 ауд.</room>
+                <building type="str">ул.Ломоносова, д.9, лит. А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Математика(Лек)</lesson>
+                <teacher type="str">Ершова Юлия Юрьевна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+          </Вторник>
+          <Среда type="list">
+            <item type="dict">
+              <day type="str">Ср</day>
+              <key name="time|week" type="dict">
+                <time type="str">10:00-11:30</time>
+                <week type="str">четная неделя</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">409 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Математика(Прак)</lesson>
+                <teacher type="str">Синетова Мадина Мансуровна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Ср</day>
+              <key name="time|week" type="dict">
+                <time type="str">10:00-11:30</time>
+                <week type="str">3, 5, 7, 9, 11, 13, 15, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">461 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Математика(Прак)</lesson>
+                <teacher type="str">Синетова Мадина Мансуровна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Ср</day>
+              <key name="time|week" type="dict">
+                <time type="str">11:40-13:10</time>
+                <week type="str">четная неделя</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">303|2 (усл) ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Основы профессиональной деятельности(Лаб)</lesson>
+                <teacher type="str">Ткешелашвили Нино Мерабиевна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Ср</day>
+              <key name="time|week" type="dict">
+                <time type="str">11:40-13:10</time>
+                <week type="str">3, 5, 7, 9, 11, 13, 15, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">306 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Программирование(Лаб)</lesson>
+                <teacher type="str">Сорокин Роман Борисович</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Ср</day>
+              <key name="time|week" type="dict">
+                <time type="str">13:30-15:00</time>
+                <week type="str">четная неделя</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">303|2 (усл) ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Основы профессиональной деятельности(Лаб)</lesson>
+                <teacher type="str">Ткешелашвили Нино Мерабиевна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Ср</day>
+              <key name="time|week" type="dict">
+                <time type="str">13:30-15:00</time>
+                <week type="str">3, 5, 7, 9, 11, 13, 15, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">306 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Программирование(Лаб)</lesson>
+                <teacher type="str">Сорокин Роман Борисович</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+          </Среда>
+          <Четверг type="list">
+            <item type="dict">
+              <day type="str">Чт</day>
+              <key name="time|week" type="dict">
+                <time type="str">10:00-11:30</time>
+                <week type="str">3, 5, 7, 9, 11, 13, 15, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">306 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Информатика(Лаб)</lesson>
+                <teacher type="str">Рудникова Тамара Владимировна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Чт</day>
+              <key name="time|week" type="dict">
+                <time type="str">11:40-13:10</time>
+                <week type="str">3, 5, 7, 9, 11, 13, 15, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">306 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Информатика(Лаб)</lesson>
+                <teacher type="str">Рудникова Тамара Владимировна</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Чт</day>
+              <key name="time|week" type="dict">
+                <time type="str">13:30-15:00</time>
+                <week type="str">3, 5, 7, 9, 11, 13, 15, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">285 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Дискретная математика(Лек)</lesson>
+                <teacher type="str">Поляков Владимир Иванович</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Чт</day>
+              <key name="time|week" type="dict">
+                <time type="str">15:20-16:50</time>
+                <week type="str">2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">302 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Дискретная математика(Прак)</lesson>
+                <teacher type="str">Поляков Владимир Иванович</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+          </Четверг>
+          <Пятница type="list">
+            <item type="dict">
+              <day type="str">Пт</day>
+              <key name="time|week" type="dict">
+                <time type="str">10:00-11:30</time>
+                <week type="str">четная неделя</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">актовый зал</room>
+                <building type="str">ул.Ломоносова, д.9, лит. А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Основы профессиональной деятельности(Лек)</lesson>
+                <teacher type="str">Клименков Сергей Викторович</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+            <item type="dict">
+              <day type="str">Чт</day>
+              <key name="time|week" type="dict">
+                <time type="str">11:40-13:10</time>
+                <week type="str">четная неделя</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">актовый зал</room>
+                <building type="str">ул.Ломоносова, д.9, лит. М</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Программирование(Лек)</lesson>
+                <teacher type="str">Письмак Алексей Евгеньевич</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+          </Пятница>
+          <Суббота type="list">
+            <item type="dict">
+              <day type="str">Сб</day>
+              <key name="time|week" type="dict">
+                <time type="str">10:00-11:30</time>
+                <week type="str">четная неделя</week>
+              </key>
+              <key name="room|building" type="dict">
+                <room type="str">285 ауд.</room>
+                <building type="str">Кронверкский пр., д.49, лит.А</building>
+              </key>
+              <key name="lesson|teacher" type="dict">
+                <lesson type="str">Информатика(Лек)</lesson>
+                <teacher type="str">Балакшин Павел Валерьевич</teacher>
+              </key>
+              <lesson-format type="str">Очно - дистанционный</lesson-format>
+            </item>
+          </Суббота>
+        </all>
+    \end{verbatim}  
+\endgroup
+\subsection{Доп. задание 2}
+\paragraph{Текст задания:}
+\hfill \break
+1) Переписать исходный код, добавив в него использование регулярных выражений.\\
+2) Сравнить полученные результаты и объяснить их сходство/различие.\\
+\paragraph{Код}
+\hfill \break
+\FloatBarrier
+\lstinputlisting[language=Python,numbers=left]{prog3/main.py}
+\hfill \break
+\textbf{Результат программы:}\\
+\begingroup
+    \fontsize{5pt}{7pt}\selectfont
+    \begin{verbatim}  
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <main>
+        <Вторник>
+            <day>Вт</day>
+            <time|week>
+                <time>11:40-13:10</time>
+                <week>2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</week>
+            </time|week>
+            <room|building>
+                <room>2202 ауд.</room>
+                <building>ул.Ломоносова, д.9, лит. А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Математика(Лек)</lesson>
+                <teacher>Ершова Юлия Юрьевна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+        </Вторник>
+        <Среда>
+            <day>Ср</day>
+            <time|week>
+                <time>10:00-11:30</time>
+                <week>четная неделя</week>
+            </time|week>
+            <room|building>
+                <room>409 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Математика(Прак)</lesson>
+                <teacher>Синетова Мадина Мансуровна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Ср</day>
+            <time|week>
+                <time>10:00-11:30</time>
+                <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            </time|week>
+            <room|building>
+                <room>461 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Математика(Прак)</lesson>
+                <teacher>Синетова Мадина Мансуровна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Ср</day>
+            <time|week>
+                <time>11:40-13:10</time>
+                <week>четная неделя</week>
+            </time|week>
+            <room|building>
+                <room>303|2 (усл) ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Основы профессиональной деятельности(Лаб)</lesson>
+                <teacher>Ткешелашвили Нино Мерабиевна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Ср</day>
+            <time|week>
+                <time>11:40-13:10</time>
+                <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            </time|week>
+            <room|building>
+                <room>306 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Программирование(Лаб)</lesson>
+                <teacher>Сорокин Роман Борисович</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Ср</day>
+            <time|week>
+                <time>13:30-15:00</time>
+                <week>четная неделя</week>
+            </time|week>
+            <room|building>
+                <room>303|2 (усл) ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Основы профессиональной деятельности(Лаб)</lesson>
+                <teacher>Ткешелашвили Нино Мерабиевна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Ср</day>
+            <time|week>
+                <time>13:30-15:00</time>
+                <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            </time|week>
+            <room|building>
+                <room>306 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Программирование(Лаб)</lesson>
+                <teacher>Сорокин Роман Борисович</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+        </Среда>
+        <Четверг>
+            <day>Чт</day>
+            <time|week>
+                <time>10:00-11:30</time>
+                <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            </time|week>
+            <room|building>
+                <room>306 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Информатика(Лаб)</lesson>
+                <teacher>Рудникова Тамара Владимировна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Чт</day>
+            <time|week>
+                <time>11:40-13:10</time>
+                <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            </time|week>
+            <room|building>
+                <room>306 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Информатика(Лаб)</lesson>
+                <teacher>Рудникова Тамара Владимировна</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Чт</day>
+            <time|week>
+                <time>13:30-15:00</time>
+                <week>3, 5, 7, 9, 11, 13, 15, 17</week>
+            </time|week>
+            <room|building>
+                <room>285 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Дискретная математика(Лек)</lesson>
+                <teacher>Поляков Владимир Иванович</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Чт</day>
+            <time|week>
+                <time>15:20-16:50</time>
+                <week>2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17</week>
+            </time|week>
+            <room|building>
+                <room>302 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Дискретная математика(Прак)</lesson>
+                <teacher>Поляков Владимир Иванович</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+        </Четверг>
+        <Пятница>
+            <day>Пт</day>
+            <time|week>
+                <time>10:00-11:30</time>
+                <week>четная неделя</week>
+            </time|week>
+            <room|building>
+                <room>актовый зал</room>
+                <building>ул.Ломоносова, д.9, лит. А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Основы профессиональной деятельности(Лек)</lesson>
+                <teacher>Клименков Сергей Викторович</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+            <day>Чт</day>
+            <time|week>
+                <time>11:40-13:10</time>
+                <week>четная неделя</week>
+            </time|week>
+            <room|building>
+                <room>актовый зал</room>
+                <building>ул.Ломоносова, д.9, лит. М</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Программирование(Лек)</lesson>
+                <teacher>Письмак Алексей Евгеньевич</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+        </Пятница>
+        <Суббота>
+            <day>Сб</day>
+            <time|week>
+                <time>10:00-11:30</time>
+                <week>четная неделя</week>
+            </time|week>
+            <room|building>
+                <room>285 ауд.</room>
+                <building>Кронверкский пр., д.49, лит.А</building>
+            </room|building>
+            <lesson|teacher>
+                <lesson>Информатика(Лек)</lesson>
+                <teacher>Балакшин Павел Валерьевич</teacher>
+            </lesson|teacher>
+            <lesson-format>Очно - дистанционный</lesson-format>
+        </Суббота>
+      </main>
+    \end{verbatim}  
+\endgroup
+\subsection{Доп. задание 3}
+\paragraph{Текст задания:}
+\hfill \break
+1) Используя свою исходную программу из обязательного задания, программу из дополнительного задания №1 и программу из дополнительного задания №2, сравнить десятикратное время выполнения парсинга + конвертации в цикле.\\
+2) Проанализировать полученные результаты и объяснить их сходство/различие.\\
+\paragraph{Код}
+\hfill \break
+\FloatBarrier
+\lstinputlisting[language=Python,numbers=left]{PythonPr1/main.py}
+\hfill \break
+\textbf{Результат программы:}\\
+--- №1 0.03397226333618164 seconds*10 ---\\
+--- №2 0.06451845169067383 seconds*10 ---\\
+--- Difference: 0.030546188354492188 seconds*10 ---\\
+\subsection{Доп. задание 4}
+\paragraph{Текст задания:}
+\hfill \break
+1) Переписать исходную, чтобы она осуществляла парсинг и конвертацию исходного файла в любой другой формат (кроме JSON, YAML, XML, HTML): PROTOBUF, TSV, CSV, WML и т.п.\\
+2) Проанализировать полученные результаты, объяснить осоебнности использованного формата.\\
+\textbf{JSON $\rightarrow$ Markdown}
+\paragraph{Код}
+\hfill \break
+\FloatBarrier
+\lstinputlisting[language=Python,numbers=left]{prog4/main.py}
+\hfill \break
+\textbf{Результат программы:}\\
+\verbatiminput{prog4/test.md}
+\section{Вывод:}
+В этой лабораторной работе я познакомился с языками разметки, научился парсить и конвертировать JSON в XML и JSON в Markdown.
+\end{flushleft}
+\begin{thebibliography}{2}
+\addcontentsline{toc}{section}{\bibname}
+\bibitem {1}
+\href{https://habr.com/ru/post/524288/}{Что такое XML} --- @Molechka
+\bibitem {2}
+\href{https://github.com/sandino/Markdown-Cheatsheet#headers}{Шпаргалка по Markdown} --- @sandino
+\end{thebibliography}
+\end{document}
